@@ -15,7 +15,6 @@ const Skills = (props) => {
     const skillsQuery = '*[_type == "skills"]';
 
     client.fetch(experiencesQuery).then((data) => {
-      console.log("data exp", data);
       setExperiences(data);
     });
 
