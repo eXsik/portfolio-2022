@@ -1,20 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { images } from '../../constants';
 import "./Header.scss";
 import { AppWrap } from "../../wrapper";
-
-const scaleVariants = {
-  whileInView: {
-    scale: [0, 1],
-    opacity: [0, 1],
-    transition: {
-      duration: 1,
-      ease: 'easeInOut'
-    }
-  }
-}
 
 const Header = () => {
   return (
@@ -23,46 +11,30 @@ const Header = () => {
         whileInView={{ x: [-100, 0], opacity: [0, 1]}}
         transition={{ duration: 0.5 }}
         className="app__header-info"
+        style={{ opacity: 0}}
       >
-        <div className="app__header-badge">
-          <div className="badge-cmp app_flex">
-            <div>
-              <p className="p-text"> Hello, I'm</p>
-              <h1 className="head-text">Micael </h1>
-            </div>
-          </div>
-          <div className="tag-cmp app_flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Graphic designer</p>
-          </div>
-        </div>
-      </motion.div>
+        <p className="font-secondary app__header-p">
+          Hi, my name is
+        </p>
+        <h1 className="app__header-h1">
+          <span>Kuba Skupinski </span>
+          <br/>
+          <span>I build things for the web.</span>
+        </h1>
+        <p className="app__header-desc">
+          I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.
+        </p>
 
-      <motion.div
-        whileInView={{ opacity: [0, 1]}}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__header-img"
-      >
-        <img src={images.profile} alt="profile_bg" />
-        <motion.img
-          whileInView={{ scale: [0, 1]}}
-          transition={{ duration: 1, ease: 'easeInOut' }}
-          className="overlay_circle"
-          src={images.circle}
-          alt="profile_circle"
-    
-        />
-      </motion.div>
+        <div className="app__flex app__header-button-container">
+          <button className="button--primary">
+            Check my Work
+          </button>
 
-      <motion.div variant={scaleVariants}
-        whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
-      >
-        {[images.flutter, images.redux, images.sass].map((circle, index) => {
-          return <div className="circle-cmp app__flex" key={`circle-${index}`}>
-            <img src={circle} alt="circle" />
-          </div>
-        })}
+          <button className="button--secondary">
+            Contact me
+          </button>
+        </div>`
+
       </motion.div>
     </div>
   );

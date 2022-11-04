@@ -5,12 +5,23 @@ import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion'; 
 
 export default function Navbar() {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
+  const [color, setColor] = useState(false);
+
+  const changeColor = () => {
+    if (window.scrollY >= 200 ) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  }
+
+  window.addEventListener('scroll', changeColor);
 
   return (
-    <nav className="app__navbar">
+    <nav className={ color ? 'app__navbar app__navbar-bg' : 'app__navbar'}>
         <div className="app__navbar-logo">
-          <img src={images.logo} alt="logo" />
+          <img src={images.qbaLogoWhite} alt="logo" />
         </div>
         <ul className="app__navbar-links">
           {["home", "about", "work", "skills", "contact"].map((item) => (

@@ -6,12 +6,17 @@
   align-items: center;
 
   padding: 1rem 2rem;
-  background: rgba(#ffffff, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(#fff, 0.18);
+  background: rgba(var(--white-color), 0.25);
+  border: 1px solid rgba(var(--white-color), 0.18);
   position: fixed;
   z-index: 2;
+}
+
+.app__navbar-bg {
+  background: linear-gradient(
+    to right, 
+    rgba(#09203f, 0.8), 
+    rgba(#537895, 0.90)),
 }
 
 .app__navbar-logo {
@@ -20,12 +25,12 @@
   align-items: center;
 
   img {
-    width: 90px;
-    height: 20px;
+    width: 75px;
+    height: 55px;
 
     @media screen and (min-width: 2000px) {
-      width: 180px;
-      height: 40px;
+      width: 150px;
+      height: 110px;
     }
   }
 }
@@ -54,23 +59,26 @@
     }
 
     a {
-      color: var(--gray-color);
+      color: var(--white-color);
       text-decoration: none;
       flex-direction: column;
 
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 600;
+      letter-spacing: 3px;
 
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        color: var(--secondary-color);
+        transform: translateY(-3px);
+        color: var(--primary-color);
       }
     }
 
     &:hover {
       div {
-        background: var(--secondary-color);
+        background: var(--primary-color);
+        transform: translateY(-3px);
       }
     }
   }

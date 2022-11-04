@@ -2,8 +2,17 @@
   margin-top: 20px;
 }
 
+.font-secondary {
+  font-family: 'Fjalla One', sans-serif !important;
+}
+
+// body {
+//   padding: 2rem;
+// }
+
 .app {
-  background-color: var(--primary-color);
+  // background-color: var(--primary-color);
+  background-color: linear-gradient();
   font-family: var(--font-base);
 }
 
@@ -165,7 +174,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    background-color: #ddd;
     margin: 0.5rem;
 
     transition: background-color 0.2s ease-in-out;

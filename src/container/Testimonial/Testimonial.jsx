@@ -91,6 +91,6 @@ const Testimonial = (props) => {
 
 export default AppWrap(
   MotionWrap(Testimonial, "app__testimonial"),
-  "testimonial",
-  "app__primarysbg"
+  "testimonials",
+  "app__primarybg"
 );
