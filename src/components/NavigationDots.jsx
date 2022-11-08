@@ -15,7 +15,7 @@ const NavigationDots = ({ active }) => {
             <span style={ {display: "none"} }>&nbsp;</span>
           </a>
         )
-      )}
+      )} 
     </div>
   );
 };
