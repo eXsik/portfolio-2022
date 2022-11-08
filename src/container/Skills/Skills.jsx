@@ -48,7 +48,9 @@ const Skills = (props) => {
         </motion.div>
 
         <motion.div className="app__skills-exp">
-          {experiences.map((experience) => (
+          {experiences &&
+          experiences.sort((a, b) => a.year > b.year ? -1 : 1 )
+          .map((experience) => (
             <motion.div className="app__skills-exp-item" key={experience.year}>
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
@@ -66,6 +68,7 @@ const Skills = (props) => {
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
+
                     <ReactTooltip
                       id={work.name}
                       effect="solid"

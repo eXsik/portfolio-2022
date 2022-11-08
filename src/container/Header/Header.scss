@@ -7,7 +7,7 @@
       rgba(#537895, 0.90)),
       url("../../assets/hero_bg.jpg");
   background-size: cover;
-  background-position: bottom;
+  // background-position: bottom;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
@@ -73,7 +73,7 @@
     .app__header-button-container {
       margin-top: 1.5rem;
 
-      button {
+      .button {
         padding: 0.5rem 1rem;
         border-width: 2px;
         font-weight: 500;
@@ -84,6 +84,7 @@
         cursor: pointer;
         transition: all .3s ease-in-out;
         border: 4px solid var(--secondary-color);
+        text-decoration: none;
 
         &:hover {
           transform: scale(1.02);
