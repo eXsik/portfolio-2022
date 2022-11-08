@@ -22,17 +22,17 @@ const Header = () => {
           <span>I build things for the web.</span>
         </h1>
         <p className="app__header-desc">
-          I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.
+          I'm a web developer and graphic designer. I specialize in designing and coding website, mobile apps and web apps. I'm focused on building accessible, modern, beautiful and fast products.
         </p>
 
         <div className="app__flex app__header-button-container">
-          <button className="button--primary">
+          <a className="button button--primary" href="#skills">
             Check my Work
-          </button>
+          </a>
 
-          <button className="button--secondary">
+          <a className="button button--secondary" href="#contact">
             Contact me
-          </button>
+          </a>
         </div>`
 
       </motion.div>

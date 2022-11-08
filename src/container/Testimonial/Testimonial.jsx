@@ -62,7 +62,7 @@ const Testimonial = (props) => {
                 className="app__flex"
                 onClick={() =>
                   handleClick(
-                    currentIndex === testimonials.length + 1
+                    currentIndex === testimonials.length - 1
                       ? 0
                       : currentIndex + 1
                   )
