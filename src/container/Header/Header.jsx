@@ -22,7 +22,7 @@ const Header = () => {
           <span>I build things for the web.</span>
         </h1>
         <p className="app__header-desc">
-          I'm a web developer and graphic designer. I specialize in designing and coding website, mobile apps and web apps. I'm focused on building accessible, modern, beautiful and fast products.
+          I'm a web developer and graphic designer. I specialize in designing and coding websites, mobile apps and web apps. I'm focused on building accessible, modern, beautiful and fast products.
         </p>
 
         <div className="app__flex app__header-button-container">
