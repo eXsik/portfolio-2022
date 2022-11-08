@@ -11,7 +11,9 @@ const NavigationDots = ({ active }) => {
             title={item}
             className="app__navigation-dot"
             style={active === item ? { backgroundColor: "#0575E6" } : {}}
-          />
+          >
+            <span style={ {display: "none"} }>&nbsp;</span>
+          </a>
         )
       )}
     </div>
